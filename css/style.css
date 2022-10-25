@@ -10873,24 +10873,69 @@ textarea.form-control-lg {
   padding: 20px;
   text-align: center;
   font-family: "Island Moments", cursive;
-  position: absolute;
   background-color: blue;
   border: 1px solid black;
+  height: 100%;
 }
 
+.nav {
+  grid-area: nav;
+}
+
+.hero {
+  grid-area: hero;
+}
 .hero .section-title1, .hero section.contact h1, section.contact .hero h1, .hero section.contact .h1, section.contact .hero .h1, .hero section.contact h2, section.contact .hero h2, .hero section.contact .h2, section.contact .hero .h2, .hero section.contact h3, section.contact .hero h3, .hero section.contact .h3, section.contact .hero .h3, .hero section.contact h4, section.contact .hero h4, .hero section.contact .h4, section.contact .hero .h4, .hero section.contact h5, section.contact .hero h5, .hero section.contact .h5, section.contact .hero .h5, .hero section.contact h6, section.contact .hero h6, .hero section.contact .h6, section.contact .hero .h6 {
   z-index: 2;
 }
 
+.gallery {
+  grid-area: gallery;
+}
 .gallery .section-title1, .gallery section.contact h1, section.contact .gallery h1, .gallery section.contact .h1, section.contact .gallery .h1, .gallery section.contact h2, section.contact .gallery h2, .gallery section.contact .h2, section.contact .gallery .h2, .gallery section.contact h3, section.contact .gallery h3, .gallery section.contact .h3, section.contact .gallery .h3, .gallery section.contact h4, section.contact .gallery h4, .gallery section.contact .h4, section.contact .gallery .h4, .gallery section.contact h5, section.contact .gallery h5, .gallery section.contact .h5, section.contact .gallery .h5, .gallery section.contact h6, section.contact .gallery h6, .gallery section.contact .h6, section.contact .gallery .h6 {
   z-index: -1;
-  top: 100px;
-  left: 90px;
 }
 
-section.contact h1, section.contact .h1, section.contact h2, section.contact .h2, section.contact h3, section.contact .h3, section.contact h4, section.contact .h4, section.contact h5, section.contact .h5, section.contact h6, section.contact .h6 {
-  left: 140px;
-  top: 50px;
+section.contact {
+  grid-area: contact;
+}
+.ontop {
+  position: relative;
+  color: red;
+  z-index: 9999;
+}
+
+.ontop:nth-of-type(1) {
+  top: 100px;
+}
+
+.child1 {
+  color: red;
+  position: absolute;
+  z-index: 9999;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  background-color: yellow;
+}
+
+.child2 {
+  color: blue;
+}
+
+.parent {
+  background-color: red;
+  position: relative;
+  height: 500px;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: "nav nav nav nav" "gallery hero hero hero" "gallery hero hero hero" "contact contact contact contact";
+  grid-template-rows: 100px 1fr 1fr 200px;
+  grid-template-columns: 200px 1fr 1fr 1fr;
 }
 
 /*# sourceMappingURL=style.css.map */

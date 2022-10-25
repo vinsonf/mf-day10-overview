@@ -1,8 +1,8 @@
 .gallery {
+    grid-area: gallery;
     .section-title1 {
         @extend .text-white;
         z-index: -1;
-        top: 100px;
-        left: 90px;
+       
     }
 }

@@ -1,6 +1,7 @@
 
 
 .hero {
+    grid-area: hero;
     .section-title1 {
       @extend .text-white;
         z-index: 2;

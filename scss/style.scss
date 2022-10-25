@@ -5,10 +5,100 @@
 
 @import 'components';
 
+@import 'nav';
+
 @import 'hero';
 
 @import 'gallery';
 @import 'contact';
 
+.ontop{
+  position: relative;
+  color: red;
+  z-index: 9999;
 
 
+}
+
+.ontop:nth-of-type(1){
+  top: 100px;
+
+}
+
+
+.child {
+  // background-color: ;
+}
+
+.child1 {
+  color: red;
+  position: absolute;
+  z-index: 9999;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  background-color: yellow;
+}
+.child2 {
+  color: blue;
+  // position: relative;
+  // left: 20px;
+  // top: -10px;
+}
+
+.child3 {
+  // color: black;
+  // position: absolute;
+  // top: 0;
+  // left: 20px;
+  
+}
+
+// .parent {
+//   position: absolute;
+//   background-color: yellow;
+//   width: 200px;
+//   height: 200px;
+//   left: 100px;
+//   top: 100px;
+// }
+
+// .grandparent {
+//   position: absolute;
+//   background-color: green;
+//   width: 200px;
+//   height: 200px;
+//   left: 100px;
+//   top: 100px;
+// }
+
+.parent {
+  background-color: red;
+  position: relative;
+  height: 500px;
+}
+
+// display types
+// floats
+// position
+// flexbox
+// grid
+
+
+
+body {
+  display: grid;
+  // grid-template-columns: 2fr 2fr 1fr;
+  // grid-template-rows: 1fr 1fr 3fr;
+  height: 100vh;
+  grid-template-areas: 
+  'nav nav nav nav'
+  'gallery hero hero hero'
+  'gallery hero hero hero'
+  'contact contact contact contact';
+  ;
+  grid-template-rows: 100px 1fr 1fr 200px;
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  
+}
