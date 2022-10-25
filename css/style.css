@@ -8122,7 +8122,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-white, .gallery .section-title1, .gallery section.contact h1, section.contact .gallery h1, .gallery section.contact .h1, section.contact .gallery .h1, .gallery section.contact h2, section.contact .gallery h2, .gallery section.contact .h2, section.contact .gallery .h2, .gallery section.contact h3, section.contact .gallery h3, .gallery section.contact .h3, section.contact .gallery .h3, .gallery section.contact h4, section.contact .gallery h4, .gallery section.contact .h4, section.contact .gallery .h4, .gallery section.contact h5, section.contact .gallery h5, .gallery section.contact .h5, section.contact .gallery .h5, .gallery section.contact h6, section.contact .gallery h6, .gallery section.contact .h6, section.contact .gallery .h6, .hero .section-title1, .hero section.contact h1, section.contact .hero h1, .hero section.contact .h1, section.contact .hero .h1, .hero section.contact h2, section.contact .hero h2, .hero section.contact .h2, section.contact .hero .h2, .hero section.contact h3, section.contact .hero h3, .hero section.contact .h3, section.contact .hero .h3, .hero section.contact h4, section.contact .hero h4, .hero section.contact .h4, section.contact .hero .h4, .hero section.contact h5, section.contact .hero h5, .hero section.contact .h5, section.contact .hero .h5, .hero section.contact h6, section.contact .hero h6, .hero section.contact .h6, section.contact .hero .h6 {
+.text-white, .gallery .section-title1, .gallery section.contact h1, section.contact .gallery h1, .gallery section.contact .h1, section.contact .gallery .h1, .gallery section.contact h2, section.contact .gallery h2, .gallery section.contact .h2, section.contact .gallery .h2, .gallery section.contact h3, section.contact .gallery h3, .gallery section.contact .h3, section.contact .gallery .h3, .gallery section.contact h4, section.contact .gallery h4, .gallery section.contact .h4, section.contact .gallery .h4, .gallery section.contact h5, section.contact .gallery h5, .gallery section.contact .h5, section.contact .gallery .h5, .gallery section.contact h6, section.contact .gallery h6, .gallery section.contact .h6, section.contact .gallery .h6 {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
@@ -10883,10 +10883,17 @@ textarea.form-control-lg {
 }
 
 .hero {
-  grid-area: hero;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero .section-title1, .hero section.contact h1, section.contact .hero h1, .hero section.contact .h1, section.contact .hero .h1, .hero section.contact h2, section.contact .hero h2, .hero section.contact .h2, section.contact .hero .h2, .hero section.contact h3, section.contact .hero h3, .hero section.contact .h3, section.contact .hero .h3, .hero section.contact h4, section.contact .hero h4, .hero section.contact .h4, section.contact .hero .h4, .hero section.contact h5, section.contact .hero h5, .hero section.contact .h5, section.contact .hero .h5, .hero section.contact h6, section.contact .hero h6, .hero section.contact .h6, section.contact .hero .h6 {
-  z-index: 2;
+.hero img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.hero p {
+  width: 200px;
 }
 
 .gallery {
@@ -10928,14 +10935,6 @@ section.contact {
   background-color: red;
   position: relative;
   height: 500px;
-}
-
-body {
-  display: grid;
-  height: 100vh;
-  grid-template-areas: "nav nav nav nav" "gallery hero hero hero" "gallery hero hero hero" "contact contact contact contact";
-  grid-template-rows: 100px 1fr 1fr 200px;
-  grid-template-columns: 200px 1fr 1fr 1fr;
 }
 
 /*# sourceMappingURL=style.css.map */
